@@ -22,6 +22,7 @@ from rest_app import views
 router = routers.DefaultRouter()
 router.register('users', views.UserViewSet)
 router.register('groups',views.GroupViewSet)
+router.register('NameModel',views.NameViewSet)
 
 urlpatterns = [
     path('',views.index,name='index'),
