@@ -41,7 +41,7 @@ INSTALLED_APPS = [
                       #pip install djangorestframework
                       #pip install markdown
                       #pip install django-filter
-    'rest_app' #import app
+    'rest_app', #import app
 ]
 
 MIDDLEWARE = [
