@@ -3,7 +3,7 @@ from rest_app.forms import name_form
 from django.contrib.auth.models import User, Group
 from .models import NameModel
 from rest_framework import viewsets
-from rest_app.serializers import UserSerializer, GroupSerializer
+from rest_app.serializers import UserSerializer, GroupSerializer, NameSerializer
 
 # Create your views here.
 def index(request):
