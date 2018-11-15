@@ -20,11 +20,13 @@ from rest_framework import routers
 from rest_app import views
 
 router = routers.DefaultRouter()
-router.register('users', views.UserViewSet)
-router.register('groups',views.GroupViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'groups',views.GroupViewSet)
+router.register(r'NameModel',views.NameViewSet)
 
 urlpatterns = [
     path('',views.index,name='index'),
     path('admin/', admin.site.urls),
-    path('api/',include('rest_framework.urls')), #Include the URLS.py to access the REST browser
+    path(r'api-browser/',include('rest_framework.urls', namespace='rest_framework')),
+    path(r'api/',include(router.urls)), #Include the URLS.py to access the REST browser
 ]

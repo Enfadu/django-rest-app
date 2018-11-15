@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_app.forms import name_form
 from django.contrib.auth.models import User, Group
+from .models import NameModel
 from rest_framework import viewsets
-from rest_app.serializers import UserSerializer, GroupSerializer
+from rest_app.serializers import UserSerializer, GroupSerializer, NameSerializer
 
 # Create your views here.
 def index(request):
@@ -21,8 +22,12 @@ def index(request):
 
     return render(request,'rest_app/index.html', {'new_form':new_form})
 
+class NameViewSet(viewsets.ModelViewSet):
+    queryset = NameModel.objects.all()
+    serializer_class = NameSerializer
+
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by('-date_joined')
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 class GroupViewSet(viewsets.ModelViewSet):
