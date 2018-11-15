@@ -22,9 +22,11 @@ def index(request):
 
     return render(request,'rest_app/index.html', {'new_form':new_form})
 
+#Define viewsets for each of the serializer classes
+#Django REST looks here when defining what to show
 class NameViewSet(viewsets.ModelViewSet):
-    queryset = NameModel.objects.all()
-    serializer_class = NameSerializer
+    queryset = NameModel.objects.all() #Define what objects are shown, all here.
+    serializer_class = NameSerializer #Define the serializer class for this viewset
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
