@@ -27,5 +27,6 @@ router.register('NameModel',views.NameViewSet)
 urlpatterns = [
     path('',views.index,name='index'),
     path('admin/', admin.site.urls),
-    path('api/',include('rest_framework.urls')), #Include the URLS.py to access the REST browser
+    path('api-browser/',include('rest_framework.urls', namespace='rest_framework')),
+    path('api/',include(router.urls)), #Include the URLS.py to access the REST browser
 ]
