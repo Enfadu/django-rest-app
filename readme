@@ -8,10 +8,12 @@ To access the API:
 2. Navigate to the directory and run:
   'python manage.py runserver'
 3. Navigate your browser to:
-  '127.0.0.1:800/api/NameModel'
+  '127.0.0.1:8000/api/NameModel'
 
 
   Required libraries:
+    'pip install python==3.6'
+    'pip install django==2.1'
     'pip install djangorestframework'
 
   Optional Libraries:
