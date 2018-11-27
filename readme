@@ -1,17 +1,19 @@
 This project utilizes Django REST Framework in order to create
 an API to access users from a website.
 
-The Faker library was used to populate a model.
+The Faker library was used to populate the 'NameModel' model.
 
 To access the API:
 1. Download the project and unzip
 2. Navigate to the directory and run:
   'python manage.py runserver'
 3. Navigate your browser to:
-  '127.0.0.1:800/api/NameModel'
+  '127.0.0.1:8000/api/NameModel'
 
 
   Required libraries:
+    'pip install python==3.6'
+    'pip install django==2.1'
     'pip install djangorestframework'
 
   Optional Libraries:
